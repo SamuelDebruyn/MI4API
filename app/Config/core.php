@@ -17,7 +17,8 @@
  * @since         CakePHP(tm) v 0.2.9
  * @license       http://www.opensource.org/licenses/mit-license.php MIT License
  */
-
+/*DebugKit Github*/
+    Configure::write('debug', 1);
 /**
  * CakePHP Debug Level:
  *
@@ -222,12 +223,12 @@
 /**
  * A random string used in security hashing methods.
  */
-	Configure::write('Security.salt', 'DYhG93b0qyJfIxfs2guVoUubWwvniR2G0FgaC9mi');
+	Configure::write('Security.salt', 'H0YbemjiBiCSLKaOGHmS0khbPrY4RowGBZU1fNb1p5qy3emrEcWC8AzkVemHzLW');
 
 /**
  * A random numeric string (digits only) used to encrypt/decrypt strings.
  */
-	Configure::write('Security.cipherSeed', '76859309657453542496749683645');
+	Configure::write('Security.cipherSeed', '83913183712932498173899348827');
 
 /**
  * Apply timestamps with the last modified time to static assets (js, css, images).
