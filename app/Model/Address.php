@@ -1,6 +1,6 @@
 <?php 
     
-    Class Address extends AppModel{
+    class Address extends AppModel{
         
     }
 
