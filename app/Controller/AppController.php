@@ -31,5 +31,14 @@ App::uses('Controller', 'Controller');
  * @link		http://book.cakephp.org/2.0/en/controllers.html#the-app-controller
  */
 class AppController extends Controller {
-    public $components = array('DebugKit.Toolbar');
+	public $components = array('DebugKit.Toolbar', 'RequestHandler');
+
+	protected function _isJson() {
+		if (!isset($this -> request -> params['ext']))
+			$this->set('json', false);
+		if ($this -> request -> params['ext'] == "json")
+			$this->set('json', true);
+		$this->set('json', false);
+	}
+
 }
