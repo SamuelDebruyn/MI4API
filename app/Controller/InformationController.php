@@ -30,11 +30,7 @@
 		}
 		
 		public function add(){
-			if($this->Information->save($this->request->data)) {
-            	$this->response->statusCode(204);
-        	} else {
-            	throw new BadRequestException();
-        	}
+			throw new ForbiddenException();
 		}
 		
     }

@@ -112,7 +112,7 @@
  * will override the automatic detection of full base URL and can be
  * useful when generating links from the CLI (e.g. sending emails)
  */
-	//Configure::write('App.fullBaseUrl', 'http://example.com');
+	Configure::write('App.fullBaseUrl', 'http://mi4.sa.muel.be');
 
 /**
  * Web path to the public images directory under webroot.
@@ -357,7 +357,7 @@ if (Configure::read('debug') > 0) {
 }
 
 // Prefix each application on the same server with a different string, to avoid Memcache and APC conflicts.
-$prefix = 'myapp_';
+$prefix = 'mi4_';
 
 /**
  * Configure the cache used for general framework caching. Path information,

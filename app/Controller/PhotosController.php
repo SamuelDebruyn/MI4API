@@ -1,7 +1,7 @@
 <?php 
     
     class PhotosController extends AppController{
-        
+    	
 		public function index(){
 			$photos = $this->Photo->find('all');
         	$this->set(array(

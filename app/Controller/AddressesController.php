@@ -1,7 +1,7 @@
 <?php 
     
     class AddressesController extends AppController{
-        
+
 		public function index(){
 			$addresses = $this->Address->find('all');
         	$this->set(array(
