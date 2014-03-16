@@ -31,7 +31,7 @@
         	if($this->Country->save($this->request->data)) {
             	$this->response->statusCode(204);
         	} else {
-				$this->response->statusCode(400);
+				throw new BadRequestException();
         	}
 		}
 		
@@ -39,7 +39,7 @@
 			if ($this->Country->delete($id)) {
             	$this->response->statusCode(204);
         	} else {
-            	$this->response->statusCode(400);
+            	throw new BadRequestException();
         	}
 		}
 		
@@ -47,7 +47,7 @@
 			if($this->Country->save($this->request->data)) {
             	$this->response->statusCode(204);
         	} else {
-            	$this->response->statusCode(400);
+            	throw new BadRequestException();
         	}
 		}
 		

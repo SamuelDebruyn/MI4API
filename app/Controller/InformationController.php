@@ -21,23 +21,19 @@
         	if($this->Information->save($this->request->data)) {
             	$this->response->statusCode(204);
         	} else {
-				$this->response->statusCode(400);
+				throw new BadRequestException();
         	}
 		}
 		
 		public function delete($id = 1){
-			if ($this->Information->delete(1)) {
-            	$this->response->statusCode(204);
-        	} else {
-            	$this->response->statusCode(400);
-        	}
+			throw new ForbiddenException();
 		}
 		
 		public function add(){
 			if($this->Information->save($this->request->data)) {
             	$this->response->statusCode(204);
         	} else {
-            	$this->response->statusCode(400);
+            	throw new BadRequestException();
         	}
 		}
 		
