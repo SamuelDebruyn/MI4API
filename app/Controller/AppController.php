@@ -31,5 +31,19 @@ App::uses('Controller', 'Controller');
  * @link		http://book.cakephp.org/2.0/en/controllers.html#the-app-controller
  */
 class AppController extends Controller {
-	public $components = array('DebugKit.Toolbar', 'RequestHandler');
+	public $components = array(
+		'DebugKit.Toolbar',
+		'RequestHandler',
+		'Auth' => array(
+        	'authenticate' => array(
+        		'Form' => array(
+					'passwordHasher' => array(
+						'className' => 'Simple'
+					)
+				),
+        		'Digest'
+			),
+        	'authError' => 'You are not allowed to view this part of the website.'
+		)
+	);
 }
