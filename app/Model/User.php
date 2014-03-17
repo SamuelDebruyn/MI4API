@@ -3,6 +3,11 @@
 	App::uses('SimplePasswordHasher', 'Controller/Component/Auth');
     
     class User extends AppModel{
+        public $belongsTo = array(
+            
+            'Address'
+        
+        );
     	
 		public function beforeSave($options = array()){
 			parent::beforeSave($options);
