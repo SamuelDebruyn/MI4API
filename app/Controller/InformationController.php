@@ -1,6 +1,11 @@
 <?php 
     
     class InformationController extends AppController{
+    	
+		public function beforeFilter(){
+			parent::beforeFilter();
+			$this->Auth->allow('index', 'view');
+		}
         
 		public function index(){
 			$this->view(1);
