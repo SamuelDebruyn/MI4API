@@ -37,11 +37,14 @@ class AppController extends Controller {
 		'Auth' => array(
         	'authenticate' => array(
         		'Form' => array(
+        			'fields' => array('username' => 'email'),
 					'passwordHasher' => array(
 						'className' => 'Simple'
 					)
 				),
-        		'Digest'
+        		'Digest' => array(
+					'fields' => array('username' => 'email')
+				)
 			),
         	'authError' => 'You are not allowed to view this part of the website.'
 		)
