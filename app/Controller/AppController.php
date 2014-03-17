@@ -20,6 +20,7 @@
  */
 
 App::uses('Controller', 'Controller');
+App::uses('AuthComponent', 'Controller/Component');
 
 /**
  * Application Controller
@@ -36,17 +37,21 @@ class AppController extends Controller {
 		'RequestHandler',
 		'Auth' => array(
         	'authenticate' => array(
-        		'Form' => array(
+        		AuthComponent::ALL => array(
         			'fields' => array('username' => 'email'),
+				),
+        		'Form' => array(
 					'passwordHasher' => array(
 						'className' => 'Simple'
 					)
 				),
-        		'Digest' => array(
-					'fields' => array('username' => 'email')
-				)
+        		'Digest'
 			),
-        	'authError' => 'You are not allowed to view this part of the website.'
+        	'authError' => 'You are not allowed to view this part of the website.',
+        	'loginAction' => array(
+            	'controller' => 'users',
+            	'action' => 'login'
+        	)
 		)
 	);
 }
