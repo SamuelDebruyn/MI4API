@@ -2,6 +2,7 @@
     
     Class Address extends AppModel{
         
+        
     }
 
 ?>
