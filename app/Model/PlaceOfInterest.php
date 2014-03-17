@@ -1,8 +1,8 @@
 <?php 
     
-    Class PlaceOfInterest extends AppModel{
+    class PlaceOfInterest extends AppModel{
         
-        public $hasMany = array(
+        /*public $hasMany = array(
             
             'Photo'
         
@@ -18,7 +18,7 @@
             
             'Address'
         
-        );
+        );*/
         
     }
 

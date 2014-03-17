@@ -4,7 +4,7 @@
     	
 		public function beforeFilter(){
 			parent::beforeFilter();
-			$this->Auth->allow('login', 'logout');
+			$this->Auth->allow();
 		}
     	
 		public function index(){
@@ -55,25 +55,6 @@
             	throw new BadRequestException();
         	}
 		}
-		
-		public function login(){
-			if($this->Auth->login()){
-				return $this->redirect($this->Auth->redirectUrl());
-			}else{
-				$this->Session->setFlash(
-               		__('Username or password is incorrect'),
-                	'default',
-                	array(),
-                	'auth'
-            	);
-			}
-		}
-		
-		public function logout() {
-   			$this->Auth->logout();
-   			return $this->redirect($this->Auth->logout());
-		}
-		
     }
 
 ?>

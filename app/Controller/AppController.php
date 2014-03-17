@@ -37,21 +37,11 @@ class AppController extends Controller {
 		'RequestHandler',
 		'Auth' => array(
         	'authenticate' => array(
-        		AuthComponent::ALL => array(
-        			'fields' => array('username' => 'email'),
-				),
-        		'Form' => array(
-					'passwordHasher' => array(
-						'className' => 'Simple'
-					)
-				),
-        		'Digest'
+        		'Digest' => array(
+					'fields' => array('username' => 'email')
+				)
 			),
-        	'authError' => 'You are not allowed to view this part of the website.',
-        	'loginAction' => array(
-            	'controller' => 'users',
-            	'action' => 'login'
-        	)
+        	'authError' => 'You are not allowed to view this part of the website.'
 		)
 	);
 }

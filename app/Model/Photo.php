@@ -1,7 +1,8 @@
 <?php 
     
-    Class Photo extends AppModel{
+    class Photo extends AppModel{
         
+		/*
         public $belongsTo = array(
             'Room'
         );
@@ -12,6 +13,6 @@
         public $belongsTo = array(
             'PlaceOfInterest'
         );
-
+		*/
     }
 ?>

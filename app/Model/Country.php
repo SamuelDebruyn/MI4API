@@ -1,12 +1,12 @@
 <?php 
     
-    Class Country extends AppModel{
+    class Country extends AppModel{
         
-        public $hasMany = array(
+        /*public $hasMany = array(
             
             'Address'
         
-        );
+        );*/
         
     }
 

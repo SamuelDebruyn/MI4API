@@ -1,6 +1,6 @@
 <?php 
     
-    Class OpeningHour extends AppModel{
+    class OpeningHour extends AppModel{
         
     }
 

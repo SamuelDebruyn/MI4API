@@ -1,12 +1,12 @@
 <?php 
     
-    Class Promotion extends AppModel{
+    class Promotion extends AppModel{
         
-        public $hasMany = array(
+        /*public $hasMany = array(
             
             'Photo'
         
-        );
+        );*/
         
     }
 

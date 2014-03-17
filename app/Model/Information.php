@@ -1,6 +1,6 @@
 <?php 
     
-    Class Information extends AppModel{
+    class Information extends AppModel{
         
     }
 
