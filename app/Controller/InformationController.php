@@ -25,6 +25,7 @@
 			
         	if($this->Information->save($this->request->data)) {
             	$this->response->statusCode(204);
+            	$this->autoRender = false;
         	} else {
 				throw new BadRequestException();
         	}

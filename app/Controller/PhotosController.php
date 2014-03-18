@@ -26,6 +26,7 @@
 			$this->Photo->id = $id;
         	if($this->Photo->save($this->request->data)) {
             	$this->response->statusCode(204);
+            	$this->autoRender = false;
         	} else {
             	throw new BadRequestException();
         	}
@@ -34,6 +35,7 @@
 		public function delete($id = null){
 			if ($this->Photo->delete($id)) {
             	$this->response->statusCode(204);
+            	$this->autoRender = false;
         	} else {
             	throw new BadRequestException();
         	}
@@ -42,6 +44,7 @@
 		public function add(){
 			if($this->Photo->save($this->request->data)) {
             	$this->response->statusCode(204);
+            	$this->autoRender = false;
         	} else {
             	throw new BadRequestException();
         	}
