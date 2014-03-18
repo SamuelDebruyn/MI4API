@@ -35,6 +35,7 @@
 			
         	if($this->User->save($this->request->data)) {
             	$this->response->statusCode(204);
+            	$this->autoRender = false;
         	} else {
 				throw new BadRequestException();
         	}
@@ -43,6 +44,7 @@
 		public function delete($id = null){
 			if ($this->User->delete($id)) {
             	$this->response->statusCode(204);
+				$this->autoRender = false;
         	} else {
             	throw new BadRequestException();
         	}
@@ -51,6 +53,7 @@
 		public function add(){
 			if($this->User->save($this->request->data)) {
             	$this->response->statusCode(204);
+				$this->autoRender = false;
         	} else {
             	throw new BadRequestException();
         	}

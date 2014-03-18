@@ -32,16 +32,22 @@ App::uses('AuthComponent', 'Controller/Component');
  * @link		http://book.cakephp.org/2.0/en/controllers.html#the-app-controller
  */
 class AppController extends Controller {
+	
 	public $components = array(
 		'DebugKit.Toolbar',
 		'RequestHandler',
+		'Session',
 		'Auth' => array(
         	'authenticate' => array(
-        		'Digest' => array(
+        		'Basic' => array(
 					'fields' => array('username' => 'email')
 				)
 			),
         	'authError' => 'You are not allowed to view this part of the website.'
 		)
 	);
+	
+	public function beforeFilter(){
+		AuthComponent::$sessionKey = false;
+	}
 }
