@@ -2,17 +2,12 @@
     
     class Photo extends AppModel{
         
-		/*
+		
         public $belongsTo = array(
-            'Room'
+            'Room'=> array('className' => 'Room'),
+            'Promotion'=> array('className' => 'Promotion'),
+            'PlaceOfInterest'=> array('className' => 'PlaceOfInterest')
         );
 
-        public $belongsTo = array(
-            'Promotion'
-        );
-        public $belongsTo = array(
-            'PlaceOfInterest'
-        );
-		*/
     }
 ?>

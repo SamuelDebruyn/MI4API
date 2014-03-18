@@ -3,16 +3,16 @@
     class Address extends AppModel{
 
         public $belongsTo = array(
-            'PlaceOfInterest'
+            'PlaceOfInterest'=> array('className' => 'PlaceOfInterest'),
+            'Country'=> array('className' => 'Country')
+            
         );  
         
-        public $belongsTo = array(
-            'Country'
-        );   
+        
         
         public $hasMany = array(
             
-            'User'
+            'User'=> array('className' => 'User')
         
         );
     }

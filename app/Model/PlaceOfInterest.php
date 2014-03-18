@@ -2,23 +2,15 @@
     
     class PlaceOfInterest extends AppModel{
         
-        /*public $hasMany = array(
-            
-            'Photo'
-        
-        );
-        
         public $hasMany = array(
             
-            'OpeningHour'
-        
+            'Photo'=> array('className' => 'Photo'),
+            'OpeningHour'=> array('className' => 'OpeningHour')
+            
         );
         
-        public $hasOne = array(
-            
-            'Address'
+        public $hasOne = 'Address';
         
-        );*/
         
     }
 

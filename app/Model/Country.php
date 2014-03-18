@@ -2,11 +2,11 @@
     
     class Country extends AppModel{
         
-        /*public $hasMany = array(
+        public $hasMany = array(
             
-            'Address'
+            'Address'=> array('className' => 'Address')
         
-        );*/
+        );
         
     }
 

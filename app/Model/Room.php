@@ -3,7 +3,7 @@
     Class Room extends AppModel{
         public $hasMany = array(
             
-            'Photo'
+            'Photo'=> array('className' => 'Photo')
         
         );
     }
