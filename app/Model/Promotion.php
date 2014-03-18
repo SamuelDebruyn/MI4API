@@ -2,11 +2,11 @@
     
     class Promotion extends AppModel{
         
-        /*public $hasMany = array(
+        public $hasMany = array(
             
-            'Photo'
+            'Photo'=> array('className' => 'Photo')
         
-        );*/
+        );
         
     }
 
