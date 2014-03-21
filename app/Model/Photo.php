@@ -6,7 +6,10 @@
         public $belongsTo = array(
             'Room'=> array('className' => 'Room'),
             'Promotion'=> array('className' => 'Promotion'),
-            'PlaceOfInterest'=> array('className' => 'PlaceOfInterest')
+            'PlaceOfInterest'=> array(
+            	'className' => 'PlaceOfInterest',
+            	'foreignKey' => 'place_of_interest_id'
+			)
         );
         
         public $validate = array(

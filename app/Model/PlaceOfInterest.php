@@ -4,8 +4,19 @@
         public $useTable = 'places_of_interest';
         
         public $hasMany = array(            
+<<<<<<< HEAD
             'Photo'=> array('className' => 'Photo'),
             'OpeningHour'=> array('className' => 'OpeningHour')         
+=======
+            'Photo'=> array(
+            	'className' => 'Photo',
+            	'foreignKey' => 'place_of_interest_id'
+			),
+            'OpeningHour'=> array(
+            	'className' => 'OpeningHour',
+				'foreignKey' => 'place_of_interest_id'
+			),            
+>>>>>>> FETCH_HEAD
         );
           
         public $belongsTo = array(
