@@ -8,6 +8,24 @@
         
         );
         
+         public $validate = array(
+         
+            'description' => array(
+                'required'=> true,
+                'allowEmpty' => false
+             ),
+            
+            'room_id' => array(
+                'naturalNumber'=>array(
+                        'rule'=> 'naturalNumber',                  
+                )
+             ),
+             
+             
+             
+                     
+         );
+        
     }
 
 ?>

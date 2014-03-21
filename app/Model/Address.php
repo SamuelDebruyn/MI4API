@@ -3,12 +3,14 @@
     class Address extends AppModel{
 
         public $belongsTo = array(
-            'PlaceOfInterest'=> array('className' => 'PlaceOfInterest'),
             'Country'=> array('className' => 'Country') 
         );  
         public $hasMany = array(
-            'User'=> array('className' => 'User') 
+            'User'=> array('className' => 'User'),
+            'PlaceOfInterest'=> array('className' => 'PlaceOfInterest'),
+            
         );
+        
         
         public $validate = array(
                 

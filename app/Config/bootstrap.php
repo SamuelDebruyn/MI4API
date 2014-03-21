@@ -92,6 +92,12 @@ Configure::write('Dispatcher.filters', array(
 	'CacheDispatcher'
 ));
 
+//Place of interests 
+//Inflector::rules($type, $rules)
+
+
+
+
 /**
  * Configures default file logging options
  */
