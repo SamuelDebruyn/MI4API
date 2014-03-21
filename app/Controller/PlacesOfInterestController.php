@@ -1,6 +1,11 @@
 <?php 
     
     class PlacesOfInterestController extends AppController{
+    	
+		public function beforeFilter(){
+			parent::beforeFilter();
+			$this->loadModel("PlaceOfInterest");
+		}
         
 		public function index(){
 			$places_of_interest = $this->PlaceOfInterest->find('all');

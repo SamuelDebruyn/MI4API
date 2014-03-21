@@ -92,8 +92,12 @@ Configure::write('Dispatcher.filters', array(
 	'CacheDispatcher'
 ));
 
-//Place of interests 
-//Inflector::rules($type, $rules)
+Inflector::rules('singular', array(
+    'uninflected' => array('information')
+));
+Inflector::rules('plural', array(
+    'uninflected' => array('information')
+));
 
 
 
