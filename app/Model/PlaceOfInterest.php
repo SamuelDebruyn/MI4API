@@ -5,7 +5,7 @@
         
         public $hasMany = array(            
             'Photo'=> array('className' => 'Photo'),
-            'OpeningHour'=> array('className' => 'OpeningHour'),            
+            'OpeningHour'=> array('className' => 'OpeningHour')         
         );
           
         public $belongsTo = array(
