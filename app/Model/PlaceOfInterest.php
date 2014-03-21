@@ -12,7 +12,7 @@
             'OpeningHour'=> array(
             	'className' => 'OpeningHour',
 				'foreignKey' => 'place_of_interest_id'
-			),            
+			)            
         );
           
         public $belongsTo = array(
