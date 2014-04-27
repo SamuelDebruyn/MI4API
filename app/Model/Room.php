@@ -22,6 +22,14 @@
                         'required'=> true,
                         'allowEmpty' => false
                 )
+             ),
+             
+             'price' => array(
+                'naturalNumber'=>array(
+                        'rule'=> array('decimal', 2),                  
+                        'required'=> true,
+                        'allowEmpty' => false
+                )
              )             
          
          );
