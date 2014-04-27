@@ -4,7 +4,7 @@
 			
 		public function beforeFilter(){
 			parent::beforeFilter();
-			$this->allow("index", "view");
+			$this->Auth->allow("index", "view");
 		}
         
 		public function index(){
