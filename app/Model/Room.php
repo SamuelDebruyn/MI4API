@@ -2,8 +2,9 @@
     
     Class Room extends AppModel{
         public $hasMany = array(
-            'Photo'=> array('className' => 'Photo')   
-        );
+            'Photo'=> array('className' => 'Photo'),
+            'Promotion' => array('className' => 'Promotion')   
+        ); 
         
          public $validate = array(
             
