@@ -1,6 +1,11 @@
 <?php 
     
     class RoomsController extends AppController{
+    	
+		public function beforeFilter(){
+			parent::beforeFilter();
+			$this->allow("index", "view");
+		}
         
 		public function index(){
 			$rooms = $this->Room->find('all');

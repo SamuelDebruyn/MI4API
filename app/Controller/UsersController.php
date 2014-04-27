@@ -2,11 +2,6 @@
     
     class UsersController extends AppController{
     	
-		public function beforeFilter(){
-			parent::beforeFilter();
-			$this->Auth->allow();
-		}
-    	
 		public function index(){
 			$users = $this->User->find('all');
         	$this->set(array(

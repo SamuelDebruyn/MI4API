@@ -1,6 +1,11 @@
 <?php 
     
     class OpeningHoursController extends AppController{
+			
+		public function beforeFilter(){
+			parent::beforeFilter();
+			$this->allow("index", "view");
+		}
         
 		public function index(){
 			$opening_hours = $this->OpeningHour->find('all');

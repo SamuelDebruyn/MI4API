@@ -5,6 +5,7 @@
 		public function beforeFilter(){
 			parent::beforeFilter();
 			$this->loadModel("PlaceOfInterest");
+			$this->allow("index", "view");
 		}
         
 		public function index(){

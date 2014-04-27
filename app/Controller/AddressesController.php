@@ -1,6 +1,11 @@
 <?php 
     
     class AddressesController extends AppController{
+    	
+		public function beforeFilter(){
+			parent::beforeFilter();
+			$this->allow("index", "view");
+		}
 
 		public function index(){
 			$addresses = $this->Address->find('all');

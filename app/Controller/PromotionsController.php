@@ -1,6 +1,11 @@
 <?php 
     
     class PromotionsController extends AppController{
+    	
+		public function beforeFilter(){
+			parent::beforeFilter();
+			$this->allow("index", "view");
+		}
         
 		public function index(){
 			$promotions = $this->Promotion->find('all');

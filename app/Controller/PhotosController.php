@@ -1,6 +1,11 @@
 <?php 
     
     class PhotosController extends AppController{
+			
+		public function beforeFilter(){
+			parent::beforeFilter();
+			$this->allow("index", "view");
+		}		
     	
 		public function index(){
 			$photos = $this->Photo->find('all');

@@ -1,6 +1,11 @@
 <?php 
     
     class CountriesController extends AppController{
+    	
+		public function beforeFilter(){
+			parent::beforeFilter();
+			$this->allow("index", "view");
+		}
         
 		public function index(){
 			$countries = $this->Country->find('all');
