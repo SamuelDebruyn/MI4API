@@ -25,7 +25,7 @@
              ),
              
              'price' => array(
-                'naturalNumber'=>array(
+                'decimalNumber'=>array(
                         'rule'=> array('decimal', 2),                  
                         'required'=> true,
                         'allowEmpty' => false
