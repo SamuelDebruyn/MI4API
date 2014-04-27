@@ -22,14 +22,7 @@
                         'required'=> true,
                         'allowEmpty' => false
                 )
-             ),
-             'price' => array(
-                'naturalNumber'=>array(
-                        'rule'=> 'naturalNumber',                  
-
-                )
-             ),
-             
+             )             
          
          );
          
