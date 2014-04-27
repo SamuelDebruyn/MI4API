@@ -7,6 +7,12 @@
             'Photo'=> array('className' => 'Photo')
         
         );
+		
+		public $belongsTo = array(
+		
+			'Room' => array('className' => 'Room')
+		
+		);
         
          public $validate = array(
          
