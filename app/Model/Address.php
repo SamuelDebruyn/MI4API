@@ -1,6 +1,8 @@
 <?php 
     
     class Address extends AppModel{
+    	
+		public $recursive = -1;
 
         public $belongsTo = array(
             'Country'=> array('className' => 'Country') 
@@ -10,7 +12,6 @@
             'PlaceOfInterest'=> array('className' => 'PlaceOfInterest'),
             
         );
-        
         
         public $validate = array(
                 

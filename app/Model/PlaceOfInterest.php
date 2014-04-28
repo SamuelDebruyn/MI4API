@@ -3,6 +3,8 @@
     class PlaceOfInterest extends AppModel{
         public $useTable = 'places_of_interest';
         
+		public $recursive = 1;
+		
         public $hasMany = array(            
 
             'Photo'=> array(
