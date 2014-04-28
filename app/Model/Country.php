@@ -1,6 +1,8 @@
 <?php 
     
     class Country extends AppModel{
+    	
+		public $recursive = -1;
         
         public $hasMany = array(
             
