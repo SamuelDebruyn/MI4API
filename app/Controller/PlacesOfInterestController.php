@@ -1,11 +1,13 @@
 <?php 
     
     class PlacesOfInterestController extends AppController{
+			
+		public $components = array('Paginator');
     	
 		public function beforeFilter(){
 			parent::beforeFilter();
 			$this->loadModel("PlaceOfInterest");
-			$this->Auth->allow("index", "view");
+			$this->Auth->allow("index", "view", "nearby");
 		}
         
 		public function index(){
@@ -58,6 +60,14 @@
         	} else {
             	throw new BadRequestException();
         	}
+		}
+		
+		public function nearby($latitude = 0, $longitude = 0, $amount = 10){
+			$places_of_interest = $this->PlaceOfInterest->find('all');
+        	$this->set(array(
+            	'places_of_interest' => $places_of_interest,
+            	'_serialize' => array('places_of_interest')
+        	));
 		}
 		
     }

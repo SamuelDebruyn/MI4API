@@ -17,6 +17,9 @@
  * @since         CakePHP(tm) v 0.2.9
  * @license       http://www.opensource.org/licenses/mit-license.php MIT License
  */
+ 
+ Configure::write('App.encoding', 'UTF-8');
+ 
 /**
  * CakePHP Debug Level:
  *

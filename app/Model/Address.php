@@ -89,7 +89,21 @@
                         'allowEmpty' => false
                         
                     )
-                 )
+                 ),
+                 'latitude' => array(
+                 	'decimalNumber'=>array(
+                        'rule'=> array('decimal'),                  
+                        'required'=> true,
+                        'allowEmpty' => false
+                )
+				 ),
+                 'longitude' => array(
+                 	'decimalNumber'=>array(
+                        'rule'=> array('decimal'),                  
+                        'required'=> true,
+                        'allowEmpty' => false
+                )
+				 )
                
         );
         
