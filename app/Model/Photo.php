@@ -2,6 +2,7 @@
     
     class Photo extends AppModel{
         
+		public $recursive = -1;
 		
         public $belongsTo = array(
             'Room'=> array('className' => 'Room'),

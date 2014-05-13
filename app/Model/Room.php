@@ -1,6 +1,9 @@
 <?php 
     
-    Class Room extends AppModel{
+    class Room extends AppModel{
+    	
+		public $recursive = 2;
+		
         public $hasMany = array(
             'Photo'=> array('className' => 'Photo'),
             'Promotion' => array('className' => 'Promotion')   
