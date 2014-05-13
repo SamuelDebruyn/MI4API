@@ -77,29 +77,11 @@ class PlacesOfInterestController extends AppController {
 			
 				SELECT
 					PlaceOfInterest.id,
-					PlaceOfInterest.name,
-					PlaceOfInterest.telephone,
-					PlaceOfInterest.address_id,
-					PlaceOfInterest.type,
-					PlaceOfInterest.modified,
 					111.045* DEGREES(ACOS(COS(RADIANS(:latpoint))
                  		* COS(RADIANS(Address.latitude))
                  		* COS(RADIANS(:longpoint) - RADIANS(Address.longitude))
                  		+ SIN(RADIANS(:latpoint))
-                		* SIN(RADIANS(Address.latitude)))) AS DistanceInKm,
-                	 Address.id,
-                	 Address.name,
-                	 Address.address_line_1,
-                	 Address.address_line_2,
-                	 Address.address_line_3,
-                	 Address.address_line_4,
-                	 Address.locality,
-                	 Address.region,
-                	 Address.zipcode,
-                	 Address.country_id,
-                	 Address.latitude,
-                	 Address.longitude,
-                	 Address.modified
+                		* SIN(RADIANS(Address.latitude)))) AS DistanceInKm
 				FROM places_of_interest PlaceOfInterest
 				INNER JOIN addresses Address
 				ON PlaceOfInterest.address_id = Address.id
